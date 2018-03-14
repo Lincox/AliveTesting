@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--Owl Carousel-->
+    <link rel="stylesheet" href="css/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/assets/owl.theme.default.min.css">
+
+    <script src="css/assets/owl.carousel.js"></script>
+
+    <!--My css-->
+    <link rel="stylesheet" type="text/css" href="css/mycss.css">
+
+    <title>ALIVE</title>
+    <link rel="shortcut icon" src="">
+
+    <style>
+        body { background-color: #fff; letter-spacing: 2px; font-family: Montserrat; height: 100%; margin: 0; }
+
+        html { max-width: 100vw !important; height: 100%; margin: 0; overflow: auto; }
+
+        @font-face { font-family: Montserrat; src: url("font/Montserrat-Regular.otf") format("opentype"); }
+
+        @font-face { font-family: Montserrat; src: url("font/Montserrat-Bold.otf") format("opentype"); font-weight: bold; }
+        
+        #alive-header { background-image: url("images/header.png");  background-repeat: no-repeat; background-position: top center; width: 100vw !important;}
+
+        #alive-latestwork { background-color: #f9f9f9; max-width: 100vw !important; background-position: center; background-repeat: no-repeat; background-size: cover; }
+
+        #alive-news { background-color: #fff; max-width: 100vw !important; background-position: center; background-repeat: no-repeat; background-size: cover; }
+
+        #alive-hiring { background-image: url("images/hiring.png"); background-repeat: no-repeat; background-position: top center; }
+
+        a, button { text-decoration: none !important; }
+
+        .owl-carousel.off { display: block; width: 100%; }
+
+        select { border: 2px solid #555654; font-size: 30px; width: 680px; height: auto; padding: 30px 10px 30px 40px; font-weight: bold; background: transparent; margin-left: 20px; 
+        -webkit-appearance: none; -moz-appearance: none; appearance: none; background: url("images/down_arrow.png") 96% / 15% no-repeat #fff !important; background-size: 25px 15px !important; }
+
+        /*margin for footer*/
+        .zero{ margin-bottom:1vw !important; }
+
+        /*Changing between menu and dropdown*/
+        nav select { display: none; }
+
+        @media (max-width: 768px) { #alive-header { background-size: cover; } 
+            nav ul { display: none !important; }
+            nav select { display: inline-block !important; }
+            .zero{ margin-bottom:5vw !important; }
+            .bggr{ width: 70%; height: 70%; } }
+
+        /*Customized select arrow*/
+        select::-ms-expand { display: none; /* remove default arrow on ie10 and ie11 */ }
+
+        /*target Internet Explorer 9 to undo the custom arrow*/
+        @media screen and (min-width:0\0) { select { background: none\9; padding: 5px\9; } }
+
+
+        @media (max-width: 450px) { #alive-header { background-size: cover; } 
+            nav ul { display: none !important; }
+            nav select { display: inline-block !important; }
+            .smllr{ width: 30%; height: 30%; } 
+            select {font-size: 20px; width: 345px; height: auto; padding: 10px 10px 10px 20px;} 
+            .temphide{font-size:15px !important;}}
+        
+    </style>
+</head>
+
+
+<header> </header>
+
+<body>
+    <div id="alive-header">
+        <div class="container">
+            <!--header-->
+            <div class="graycov container-none head-style">
+                <a href="#">
+                    <img class= "smllr"id="logo" src="images/logo.png" style="float:left" />
+                </a>
+                <!--Lang-->
+                <div id="myLang" class="tempadd overlay">
+                    <a href="javascript:void(0)" class="closebtn temphide" onclick="closeLang()">&times;</a>
+                    <div class="tempadd1 overlay-content">
+                        <ul class="aMar">
+                            <a href="" class="for-lan" style="color:#fff">EN</a>
+                            <a class="temphideLang for-lan">/</a>
+                            <a href="" class="for-lan" style="color:#fff; margin-left:-15px">JP</a>
+                            <a class="temphideLang for-lan">/</a>
+                            <a href="" class="for-lan" style="color:#fff; margin-left:-15px">VN</a>
+                        </ul>
+                    </div>
+                </div>
+                <!--Nav-->
+                <div id="myNav" class="tempadd overlay">
+                    <a href="javascript:void(0)" class="closebtn temphide" onclick="closeNav()">&times;</a>
+                    <div class="tempadd1 overlay-content">
+                        <ul class="aMar">
+                            <a href="" class="for-reg" style="color:#fff">WHAT WE DO</a>
+                            <a href="" class="for-reg" style="color:#fff">OUR WORKS</a>
+                            <a href="" class="for-reg" style="color:#fff">WHO WE ARE</a>
+                            <a href="" class="for-reg" style="color:#fff">GET IN TOUCH</a>
+                        </ul>
+                    </div>
+                </div>
+                <span class="temphide jsblack" style="font-size:30px;color:#fff;cursor:pointer; float:right" onclick="openNav()">MENU</span>
+                <span class="alive-button-lang temphide jsblack" style="color:#fff;cursor:pointer; float:right" onclick="openLang()">EN</span>
+            </div>
+
+            <!--Show who we are-->
+            <div class="row">
+                <div class="area">
+                    <div>
+                        <p class="for-bold area-margin"> <b>WE BRING EMOTION TO YOUR PRODUCT</b> </p>
+                        <div class="area-margin1">
+                            <a class="alive-button" style="color:#fff; border: 2px solid #fff;">SEE WHO WE ARE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Lastest work-->
+    <div id="alive-latestwork">
+        <div class="container">
+            <p class="for-title"> <b>LATEST WORKS</b> </p>
+            <p class="for-under"> WE BRING THIS SPECIAL IDEA </p>
+            <!--Menu and dropdown-->
+            <nav style="margin-top:3vw">
+                <ul class="nav nav-pills center-pills">
+                    <li><a href="#">Branding</a></li>
+                    <li><a href="#">Creative Marketing</a></li>
+                    <li><a href="#">Social Media</a></li>
+                    <li><a href="#">Web Development</a></li>
+                </ul>
+                <select>
+                    <option value="" selected="selected">Branding</option>
+                    <option value="">Creative Marketing</option>
+                    <option value="">Social Media</option>
+                    <option value="">Web Development Us</option>
+                </select>
+            </nav>
+            <!--Carousel-->
+            <div id="my-carousel" class="container owl-carousel owl-carousel-theme" style="z-index:1; margin-top:3vw">
+                <figure class="fou-col-sm">
+                    <div class="hov">
+                        <img src="images/1.png" alt="Latest works" class="image-overlay ">
+                        <figcaption class="lw-overlay" style="background: rgba(247, 144, 25, 0.84);">
+                            <p class="temp text-overlay">KEY VISUAL</p>
+                            <b class="temp1 text-overlay1">LATS WRKS</b>
+                        </figcaption>
+                    </div>
+                </figure>
+                <figure class="fou-col-sm">
+                    <div class="hov">
+                        <img src="images/2.png" alt="Latest works">
+                        <figcaption class="lw-overlay" style="background: rgba(143, 248, 0, 0.84);">
+                            <p class="temp text-overlay">CAMPAIGNS</p>
+                            <b class="temp1 text-overlay1">LSWAT</b>
+                        </figcaption>
+                    </div>
+                </figure>
+                <figure class="fou-col-sm">
+                    <div class="hov">
+                        <img src="images/3.png" alt="Latest works">
+                        <figcaption class="lw-overlay" style="background: rgba(255, 255, 50, 0.84);">
+                            <p class="temp text-overlay">RESEARCH</p>
+                            <b class="temp1 text-overlay1">WRKS</b>
+                        </figcaption>
+                    </div>
+                </figure>
+                <figure class="fou-col-sm">
+                    <div class="hov">
+                        <img src="images/4.png" alt="Latest works">
+                        <figcaption class="lw-overlay" style="background: rgba(50, 50, 255, 0.84);">
+                            <p class="temp text-overlay">PUBLIC RELATIONS</p>
+                            <b class="temp1 text-overlay1">L.A.T</b>
+                        </figcaption>
+                    </div>
+                </figure>
+            </div>
+            <div style="text-align: center; margin-top:5vw; margin-bottom:5vw;">
+                <a><button class="alive-button1">VIEW ALL</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!--News-->
+    <div id="alive-news">
+        <p class="for-title"> <b>NEWS</b> </p>
+        <p class="for-under"> STAY UPDATED ON OUR DAILY ROUTINE </p>
+        <div class="grid_galle" style="margin-top:5vw">
+            <div class="grid__one">
+                <div class="block_galle">
+                    <div class="block__top">
+                        <img class="galle" src="images/new1.png" alt="NEWS">
+                        <img class="galle" src="images/new2.png" alt="NEWS">
+                    </div>
+                    <img class="galle" src="images/new5.png" alt="NEWS">
+                </div>
+            </div>
+            <div class="grid__two">
+                <div class="block_galle">
+                    <img class="galle" src="images/new3.png" alt="NEWS">
+                    <img class="galle" src="images/new6.png" alt="NEWS">
+                </div>
+            </div>
+            <div class="grid__three">
+                <div class="block_galle">
+                    <img class="galle " src="images/new4.png" alt="NEWS">
+                    <img class="galle " src="images/new7.png" alt="NEWS">
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top:5vw; margin-bottom:5vw;">
+            <a><button class="alive-button2">READ ALL</button></a>
+        </div>
+    </div>
+
+    <!--our blog-->
+    <div id="alive-latestwork">
+        <div class="container">
+            <p class="for-title"> <b>OUR BLOG</b> </p>
+            <p class="for-under"> LET’S TELL THE STORIES THAT MATTER </p>
+            <div style="margin-top:3vw;">
+                <figure class="fou-col-des">
+                    <div class="blog-img-mar">
+                        <img src="images/blog1.png">
+                    </div>
+                    <a href="#" class="blog-type"> <u>Playground</u> </a>
+                    <a href="#" class="blog-title">Privacy is Power</a>
+                    <p class="blog-content block-ellipsis">Quisque ut augue in sapien mollis pretium a at dui. Quisque ut augue...</p>
+                    <a href="#" class="blog-readmore">READ MORE →</a>
+                </figure>
+                <figure class="fou-col-des">
+                    <div class="blog-img-mar">
+                        <img src="images/blog2.png">
+                    </div>
+                    <a href="#" class="blog-type"> <u>Collective</u> </a>
+                    <a href="#" class="blog-title">App Concept</a>
+                    <p class="blog-content block-ellipsis">Quisque ut augue in sapien mollis pretium a at dui. Quisque ut augue...</p>
+                    <a href="#" class="blog-readmore">READ MORE →</a>
+                </figure>
+                <figure class="fou-col-des">
+                    <div class="blog-img-mar">
+                        <img src="images/blog3.png">
+                    </div>
+                    <a href="#" class="blog-type"> <u>Tutorial</u> </a>
+                    <a href="#" class="blog-title">Open Source Guides</a>
+                    <p class="blog-content block-ellipsis">Quisque ut augue in sapien mollis pretium a at dui. Quisque ut augue...</p>
+                    <a href="#" class="blog-readmore">READ MORE →</a>
+                </figure>
+                <figure class="fou-col-des">
+                    <div class="blog-img-mar">
+                        <img src="images/blog4.png">
+                    </div>
+                    <a href="#" class="blog-type"> <u>Tutorial</u> </a>
+                    <a href="#" class="blog-title">Design Templates</a>
+                    <p class="blog-content block-ellipsis">Quisque ut augue in sapien mollis pretium a at dui. Quisque ut augue...</p>
+                    <a href="#" class="blog-readmore">READ MORE →</a>
+                </figure>
+            </div>
+            <div style="text-align: center; ">
+                <a><button class="alive-button3" style="margin-top:3vw; margin-bottom:3vw">VIEW ALL</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!--hiring-->
+    <div id="alive-hiring">
+        <div class="container">
+            <div class="area1">
+                <p class="for-bold-hiring" style="margin-top:15px">
+                    <b>LET’S WORK TOGETHER.</b>
+                </p>
+                <a><button class="alive-button-hiring" style="margin-top:15px">WE ARE HIRING</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="container zero" style="margin-top:5vw;">
+        <div class="fou-col-half one">
+            <a href="#"> <img class= "bggr" src="images/logo2.png" alt="ALIVE VIETNAM"> </a>
+        </div>
+        <div class="fou-col-half two" style="text-align:right;">
+            <a class="alive-button-getintouch" style="border: 2px solid #555654">GET IN TOUCH</a>
+            <div class="fbin">
+                <a href="#"><img class="chsize" src="images/fb.png" style="margin-left:10px"></a>
+                <a href="#"><img class="chsize" src="images/insta.png" style="margin-left:10px"></a>
+            </div>
+        </div>
+        <div class="three" style="text-align:center; float:right" >
+            <div style="margin-top:3vw">
+                <ul>
+                    <li> <a href="#" class="botnav">WHAT WE DO</a> </li>
+                    <li> <a href="#" class="botnav">OUR WORKS</a> </li>
+                    <li> <a href="#" class="botnav">WHO WE ARE</a> </li>
+                    <li> <a href="#" class="botnav">GET IN TOUCH</a> </li>
+                    <li> <a href="#" class="botnav hideimg" style="margin-right:0 !important">SITEMAP</a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="four" style="float:left">
+            <div style="margin-top:4vw">
+                <p class="fbottom">© COPYRIGHT 2015 · ALIVE CO., LTD </p>
+            </div>
+        </div> 
+    </div>
+
+    
+
+    <!---->
+    <script>
+
+        //A gray cover appear when scrolling down
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                if (scroll > 0) {
+                    $(".graycov").css("background", "rgba(192,192,192,0.5)");
+                }
+                else {
+                    $(".graycov").css("background", "rgba(192,192,192,0)");
+                }
+            })
+        })
+
+        //Navbar collapse
+        $(window).resize(function () {
+            var width = $(window).width();
+            if (width > 450) {
+                $('.tempadd').removeClass('overlay');
+                $('.tempadd1').removeClass('overlay-content');
+                $('.temphide').css("display", "none");
+                $('.temphideLang').css("display", "");
+                $('#myNav').css("width", "auto");
+                $('#myLang').css("width", "auto");
+            }
+
+            if (width > 768) {
+                $('.tempadd').removeClass('overlay');
+                $('.tempadd1').removeClass('overlay-content');
+                $('.temphide').css("display", "none");
+                $('.temphideLang').css("display", "");
+                $('#myNav').css("width", "auto");
+                $('#myLang').css("width", "auto");
+            }
+            else {
+                $('.tempadd').addClass('overlay');
+                $('.tempadd1').addClass('overlay-content');
+                $('.temphide').css("display", "");
+                $('.temphideLang').css("display", "none");
+                $('#myNav').css("width", "0");
+                $('#myLang').css("width", "0");
+            }
+        })
+
+        
+
+        //Navbar full
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+
+        //Lang full
+        function openLang() {
+            document.getElementById("myLang").style.width = "100%";
+        }
+
+        function closeLang() {
+            document.getElementById("myLang").style.width = "0%";
+        }
+
+        //Plugin for slider
+        $(document).ready(function () {
+            if ($(window).width() > 768) {
+                startCarousel();
+            } else {
+                $(".owl-carousel").addClass('off');
+            }
+        });
+
+        $(window).resize(function () {
+
+            if ($(window).width() > 768) {
+                $('.owl-carousel').css("width", "70%");
+                startCarousel();
+            } else {
+                $('.owl-carousel').css("width", "100%");
+                stopCarousel();
+            }
+        });
+
+        function startCarousel() {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    1000: {
+                        items: 3
+                    }
+                },
+                navText: ["<img src='images/left_arrow.png'>", "<img src='images/right_arrow.png'>"],
+            });
+        }
+        function stopCarousel() {
+            var owl = $('.owl-carousel');
+            owl.trigger('destroy.owl.carousel');
+            owl.addClass('off');
+        }
+
+        //Slider in desktop and 2 column in tablet
+        $(window).resize(function () {
+            var width = $(window).width();
+            if (width <= 768) {
+                $('figcaption').removeClass('lw-overlay');
+                $('.temp').removeClass('text-overlay').addClass('lw-type');
+                $('.temp1').removeClass('text-overlay1').addClass('lw-title');
+            }
+            else {
+                $('figcaption').addClass('lw-overlay');
+                $('.temp').addClass('text-overlay').removeClass('lw-type');
+                $('.temp1').addClass('text-overlay1').removeClass('lw-title');
+            }
+        })
+
+        .resize();
+
+    </script>
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+</body>
+
+</html>
